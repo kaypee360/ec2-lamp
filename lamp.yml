@@ -1,0 +1,8 @@
+---
+  - name: ajuri
+    hosts: all
+    become: yes
+    roles:
+      - apache
+      - php
+
