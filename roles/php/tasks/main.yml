@@ -1,17 +1,8 @@
 ---
   - name: task for php7
     yum:
-      name:  '{{ item }}'
+      name:  ['php70', 'php70-gd', 'php70-imap', 'php70-mbstring', 'php70-opcache', 'php70-mysqlnd', 'php70-pdo', 'php70-pecl-apcu']
       state: present
-    with_items:
-      - php70
-      - php70-gd
-      - php70-imap
-      - php70-mbstring
-      - php70-opcache
-      - php70-mysqlnd
-      - php70-pdo
-      - php70-pecl-apcu
     notify: Restart apache service
   - name: copy index file to remote
     copy:
