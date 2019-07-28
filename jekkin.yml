@@ -1,0 +1,8 @@
+---
+  - name: jenkins playbook
+    hosts: 18.216.227.190
+    become: yes
+    roles:
+      - php
+      - jenkins
+      - phpunit
